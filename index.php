@@ -1,4 +1,6 @@
 <?php
+
+$linkDB = mysqli_connect('localhost', 'root', 'rootroot', 'workshop');
 include("../entity/Account.php");
 
 session_start();
@@ -18,7 +20,6 @@ if (isset($_SESSION["account"])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <title>Workshop - Connexion</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
 <div id="wrap">
@@ -40,7 +41,6 @@ if (isset($_SESSION["account"])) {
                                 <div class="wrap-login100 p-t-85 p-b-20">
                                     <form class="login100-form validate-form" onsubmit="return validateForm()">
 
-                                        <span class="login100-form-avatar"><img src="../layout/images/avatar.png"></span>
                                         <br>
                                         <p id="error_label" style="color:red; display:none;"></p>
 
@@ -68,6 +68,7 @@ if (isset($_SESSION["account"])) {
         </section>
     </div>
 </div>
+</script>
 </body>
 </html>
 
